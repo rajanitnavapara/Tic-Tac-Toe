@@ -96,6 +96,7 @@ body{
 }
 #video{
   display: none;
+  transition: all 1s ease;
 }
 video{
   transition: all 1s ease;
