@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+    <link rel="manifest" href="manifest.json">
+<script>    
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function() {
+        console.log('Service worker registered');
+      })
+      .catch(function(error) {
+        console.log('Error registering service worker:', error);
+      });
+  }
+</script>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+  <div class="game-board">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="status"></div>
+  <button class="restart-btn">Restart</button>
+
+<div id="win-box">
+    <span id="winner-greet">X has won!</span>
+</div>
+
+<div class="video-container">
+    <video id="video" autoplay muted loop>
+        <source src="video1.mp4#t=2,13" type="video/mp4">
+    </video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
